@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Strore</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="fetchformDatas();">
+    <div class="container">
+        <div class="row mt-5 ">
+            <div class="col-md-5">
+                <h1 class="text-center mb-4">Add book</h1>
+                <form action="" id="main_form">
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" id="bookName_id" placeholder="Add Book Name" required  >
+                      <span id="bookName" class="text-danger font-weight-bold"></span>
+                      
+                    </div>
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" id="AuthorName_id" placeholder="Author Name">
+                      <span id="authorName" class="text-danger font-weight-bold"></span>
+  
+                    </div>
+                    <div class="form-group">
+                    
+                      <input type="date" class="form-control"  data-date-format="YYYY/MM/DD" id="date_id">
+                      <span id="dateName" class="text-danger font-weight-bold"></span>
+                    </div>
+  
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" id="isbNum_id" placeholder="ISBN Number"  >
+                      <span id="isbnNum" class="text-danger "></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="my_submit" onclick=" return submitForm()" >Submit</button>
+                    
+                    <button type="submit" class="btn btn-primary " id="my_update"  onclick=" return updateForm()">Update</button>
+                </form>
+            </div>
+
+            <div class="col-sm-7">
+				      <h1 class="text-center mb-4">Book List</h1>
+              <div class="row">
+                <div class="col-sm-12">
+                  <table class="table mt-4 table-striped" id="table_id">
+
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Publish Date</th>
+                        <th>ISBN</th>
+                        <th>Action</th>
+                            
+                      </tr>
+                    </thead>
+                    <tbody id="tbody_html">
+                      
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+				    </div>
+			    </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

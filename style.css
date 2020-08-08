@@ -1,0 +1,15 @@
+body{
+	font-family: 'Roboto Condensed',sans-sarif;
+	font-size: 16px;
+	color:#222;
+}
+.section_option{
+	width: 100%;
+}
+
+.button_show{
+	display: none;
+}
+.button_show1{
+	display: block;
+}
